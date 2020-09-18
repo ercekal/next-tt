@@ -12,6 +12,7 @@ interface ResultsDataState {
 type ResultAction = {
   type: string;
   resultsData: ResultsData;
+  error: string;
 };
 
 type DispatchType = (args: ResultAction) => ResultAction;

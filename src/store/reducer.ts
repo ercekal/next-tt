@@ -1,4 +1,4 @@
-import { GET_RESULTS_REQUEST, GET_RESULTS_SUCCESS } from './actionTypes';
+import { GET_RESULTS_FAILED, GET_RESULTS_REQUEST, GET_RESULTS_SUCCESS } from './actionTypes';
 
 export interface ResultsData {
   resultCount: number;
@@ -33,6 +33,13 @@ const reducer = (
         ...state,
         resultsData: action.resultsData,
         isLoading: false
+      }
+    }
+    case GET_RESULTS_FAILED: {
+      return {
+        ...state,
+        resultsData: null,
+        error: action.error
       }
     }
   }
