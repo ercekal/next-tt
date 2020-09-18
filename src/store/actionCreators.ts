@@ -1,5 +1,6 @@
 import axios from 'axios'
 import { Dispatch } from 'redux'
+import { ResultsData } from './reducer'
 
 export type Action = GetResultsAction | ReturnType<typeof getResultsSuccess | typeof getResultsFailed>
 
@@ -23,9 +24,9 @@ export const getResults = (searchText: string) => async (dispatch: Dispatch) => 
   }
 }
 
-const getResultsSuccess = (results: []) => ({
+const getResultsSuccess = (resultsData: ResultsData) => ({
   type: GET_RESULTS_SUCCESS as typeof GET_RESULTS_SUCCESS,
-  results
+  resultsData
 })
 
 const getResultsFailed = (error: string) => ({

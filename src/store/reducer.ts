@@ -1,22 +1,26 @@
 import { GET_RESULTS_REQUEST, GET_RESULTS_SUCCESS } from './actionTypes';
 
-interface ResultsState {
-  results: [] | null;
+export interface ResultsData {
+  resultCount: number;
+  results: []
+}
+interface ResultsDataState {
+  resultsData: null | ResultsData;
   isLoading: boolean;
   error: string | null;
 }
 
-const initialState: ResultsState = {
-  results: null,
+const initialState: ResultsDataState = {
+  resultsData: null,
   error: null,
   isLoading: false
 }
 
 
 const reducer = (
-  state: ResultsState = initialState,
+  state: ResultsDataState = initialState,
   action: ResultAction
-): ResultsState => {
+): ResultsDataState => {
   switch (action.type) {
     case GET_RESULTS_REQUEST: {
       return {
@@ -27,7 +31,7 @@ const reducer = (
     case GET_RESULTS_SUCCESS: {
       return {
         ...state,
-        results: action.results,
+        resultsData: action.resultsData,
         isLoading: false
       }
     }
