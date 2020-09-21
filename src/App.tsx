@@ -2,6 +2,7 @@ import * as React from 'react';
 import { useSelector } from 'react-redux';
 import './styles.css';
 import Search from './components/Search'
+import ResultsList from './components/ResultsList'
 import { ResultsData } from './store/reducer'
 
 const App: React.FC = () => {
@@ -9,11 +10,11 @@ const App: React.FC = () => {
     (state: ResultsDataState) => state.resultsData
   );
 
-  console.log('resultsData: ', resultsData);
-
   return (
     <main>
       <Search />
+      Hello
+      <ResultsList />
     </main>
   );
 };

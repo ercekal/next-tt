@@ -15,7 +15,7 @@ export const GET_RESULTS_FAILED = 'GET_RESULTS_FAILED'
 
 export const getResults = (searchText: string) => async (dispatch: Dispatch) => {
 
-  const res = await axios.get(` https://itunes.apple.com/search?term=${searchText}&limit=200&media=music`)
+  const res = await axios.get(` https://itunes.apple.com/search?term=${searchText}&limit=50&media=music`)
 
   if (res.status === 200) {
     return dispatch(getResultsSuccess(res.data))
