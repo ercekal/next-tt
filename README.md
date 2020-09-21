@@ -2,9 +2,11 @@ This project was create by create-react-app and uses redux, typescript, jest, en
 
 CORS Changer extension is used to overcome the CORS issue.
 
-Search: Has a simple input and search can be executed by pressing Enter
-ResultsList: after the search is done renders related number of ResultItem components
-ResultItem: shows the details about the each item
+Search: Has a simple input and search can be executed by pressing Enter. <br />
+
+ResultsList: after the search is done renders related number of ResultItem components.<br />
+
+ResultItem: shows the details about the each item.<br />
 
 ## Available Scripts
 
