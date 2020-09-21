@@ -1,4 +1,7 @@
 This project was create by create-react-app and uses redux, typescript, jest, enzyme, material-ui and styled-components. It has 3 components:
+
+CORS Changer extension is used to overcome the CORS issue.
+
 Search: Has a simple input and search can be executed by pressing Enter
 ResultsList: after the search is done renders related number of ResultItem components
 ResultItem: shows the details about the each item
