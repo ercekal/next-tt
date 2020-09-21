@@ -1,0 +1,20 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResultItem component renders correctly 1`] = `
+<div
+  className="sc-bdnylx jkDdCw ResultItem"
+>
+  <p>
+    Artist: 
+    test artist
+  </p>
+  <p>
+    Song Name: 
+    test track
+  </p>
+  <p>
+    Album: 
+    test album
+  </p>
+</div>
+`;

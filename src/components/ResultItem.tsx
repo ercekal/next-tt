@@ -23,7 +23,7 @@ const Div = styled.div`
 const ResultItem = ({ item }: ResultItemProps) => {
   const { artistName, trackName, collectionName } = item
   return (
-    <Div>
+    <Div className='ResultItem'>
       <p>Artist: {artistName}</p>
       <p>Song Name: {trackName}</p>
       <p>Album: {collectionName}</p>

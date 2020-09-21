@@ -1,0 +1,42 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`ResultItem component renders correctly 1`] = `
+<div
+  className="sc-bdnylx jkDdCw ResultItem"
+>
+  <p>
+    Artist: 
+    test artist
+  </p>
+  <p>
+    Song Name: 
+    test track
+  </p>
+  <p>
+    Album: 
+    test album
+  </p>
+</div>
+`;
+
+exports[`Search component renders correctly 1`] = `
+<form
+  onSubmit={[Function]}
+>
+  <div
+    className="MuiInputBase-root MuiInput-root MuiInput-underline"
+    onClick={[Function]}
+  >
+    <input
+      className="MuiInputBase-input MuiInput-input"
+      onAnimationStart={[Function]}
+      onBlur={[Function]}
+      onChange={[Function]}
+      onFocus={[Function]}
+      placeholder="Enter song, artist or album"
+      type="text"
+      value=""
+    />
+  </div>
+</form>
+`;
