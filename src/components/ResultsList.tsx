@@ -10,7 +10,6 @@ const ResultsList: React.FC = () => {
   const resultsData: null | ResultsData = useSelector(
     (state: ResultsDataState) => state.resultsData
     );
-    console.log('resultsData: ', resultsData);
     useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => window.removeEventListener('scroll', handleScroll);
