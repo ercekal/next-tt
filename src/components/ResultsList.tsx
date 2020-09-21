@@ -10,27 +10,30 @@ const ResultsList: React.FC = () => {
   const resultsData: null | ResultsData = useSelector(
     (state: ResultsDataState) => state.resultsData
     );
+
     useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, []);
+      function handleScroll() {
+        if (window.innerHeight + document.documentElement.scrollTop !== document.documentElement.offsetHeight || isFetching) return;
+        setIsFetching(true);
+      }
+      window.addEventListener('scroll', handleScroll);
+      return () => window.removeEventListener('scroll', handleScroll);
+  }, [isFetching]);
 
   useEffect(() => {
     if (!isFetching) return;
+    function fetchMoreListItems() {
+      setTimeout(() => {
+        setInitialNumber (initialNumber + 1)
+        setIsFetching(false);
+      }, 500);
+    }
     fetchMoreListItems();
-  }, [isFetching]);
+  }, [isFetching, initialNumber]);
 
-  function handleScroll() {
-    if (window.innerHeight + document.documentElement.scrollTop !== document.documentElement.offsetHeight || isFetching) return;
-    setIsFetching(true);
-  }
 
-  function fetchMoreListItems() {
-    setTimeout(() => {
-      setInitialNumber (initialNumber + 1)
-      setIsFetching(false);
-    }, 500);
-  }
+
+
 
   if (!resultsData) return null
   if (resultsData.resultCount === 0) {
